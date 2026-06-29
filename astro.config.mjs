@@ -6,6 +6,5 @@ import robotsTxt from "astro-robots-txt"
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), robotsTxt()],
-  // TODO(Pedro): replace with your real deployment domain.
-  site: 'https://pedro-rojas.vercel.app/'
+  site: 'https://pedrorojasg.vercel.app/'
 })
