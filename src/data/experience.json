@@ -1,0 +1,37 @@
+[
+  {
+    "date": "June 2021 - Present",
+    "title": "Senior Software Engineer",
+    "company": "Thrive (formerly Shopventory)",
+    "description": "SaaS inventory management platform (US). Architected and maintained core features in a high-traffic Python/Django + TypeScript/React system supporting 100,000+ daily active users. Built wholesale and bulk-data modules from scratch plus 4 deep integrations (Clover, QuickBooks, Shopify, Square) syncing 10M+ transactions/day. Led the integration of Generative AI into the engineering workflow, including AI-powered invoice parsing and an automated AI PR reviewer that cut review time by 40%.",
+    "link": "https://thrivemetrics.com/",
+    "current": true
+  },
+  {
+    "date": "June 2022 - November 2023",
+    "title": "Python Course Teacher",
+    "company": "Coderhouse",
+    "description": "Online academy (remote). Designed and delivered six 3-month intensive bootcamps on Python, Django and applied AI/LLMs (280+ hours of live instruction) to 600 students. Managed a team of 10 teaching assistants and earned a 4.9/5 rating across 600 reviews, placing in the top 5% of instructors.",
+    "link": "https://www.coderhouse.com/"
+  },
+  {
+    "date": "March 2020 - June 2021",
+    "title": "Senior Backend Engineer & Solutions Architect",
+    "company": "Cirbox (Move to the Bit)",
+    "description": "B2B SaaS credit-assessment service (Spain, remote). Architected and developed a comprehensive Python/Django REST Framework API from the ground up, exposing 30 endpoints. Led the serverless deployment on AWS Lambda with the Serverless Framework, cutting infrastructure costs by 50% while optimizing for scalability and performance."
+  },
+  {
+    "date": "February 2018 - March 2020",
+    "title": "Senior Fullstack Developer",
+    "company": "FAB Armadillo S.L.",
+    "description": "Private cryptocurrency hedge fund (Spain, remote). Built a 24/7 real-time alert system with Django Channels, Redis and Celery, monitoring 20 trading pairs and processing 1,000 trading-signal events per second at 99% uptime. Architected a backtesting simulator from scratch to validate strategies across 10 years of historical market data, plus a custom visualization system."
+  },
+  {
+    "date": "January 2017 - November 2017",
+    "title": "Web Application Developer",
+    "company": "Turpial Development",
+    "main_project": "IUCN Red List of Ecosystems",
+    "description": "Built web applications with Python/Django and Angular for multiple clients. Improved a global reporting module for the IUCN Red List of Ecosystems used by 10,000 researchers across 100 countries; optimized administrative workflows for Airways Magazine integrating Stripe and WooCommerce (10,000+ orders/month); and developed a custom industrial audit system for Steam Energy.",
+    "link": "https://iucnrle.org/"
+  }
+]

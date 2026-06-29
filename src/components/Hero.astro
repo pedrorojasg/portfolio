@@ -1,0 +1,69 @@
+---
+const personalImageAlt = "Pedro Rojas Gavidia"
+import Badge from "@/components/Badge.astro"
+import GitHubIcon from "@/components/icons/GitHub.astro"
+import LinkedInIcon from "@/components/icons/LinkedIn.astro"
+import MailIcon from "@/components/icons/Mail.astro"
+import SparklesIcon from "@/components/icons/Sparkles.astro"
+import SocialPill from "@/components/SocialPill.astro"
+---
+
+<div class="max-w-xl">
+  <div class="anim-fade-in flex gap-4 mb-6 items-center">
+    <!-- Avatar with ambient glow -->
+    <div class="relative flex-shrink-0">
+      <div
+        class="absolute inset-0 rounded-full bg-yellow-400/30 dark:bg-yellow-400/20 blur-xl scale-125"
+        aria-hidden="true"
+      >
+      </div>
+      <img
+        class="relative rounded-full shadow-2xl size-20 ring-2 ring-yellow-400/60 ring-offset-2 ring-offset-gray-50 dark:ring-offset-gray-950"
+        src="/pedro_pic.jpeg"
+        alt={personalImageAlt}
+      />
+    </div>
+    <a
+      href="https://ve.linkedin.com/in/pedro-rojas-gavidia"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge><SparklesIcon class="size-3" /> Available for work</Badge>
+    </a>
+  </div>
+
+  <h1
+    class="anim-fade-in anim-delay-1 text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hey, I'm <span class="gradient-name">Pedro</span>
+  </h1>
+
+  <p
+    class="anim-fade-in anim-delay-2 mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    +10 years of experience. <strong
+      >Senior Full Stack Engineer</strong
+    > specializing in <strong>Python &amp; Django</strong> with a strong foundation
+    in TypeScript and React. I build and scale web applications for companies across
+    the US and Europe.
+  </p>
+
+  <nav
+    class="anim-fade-in anim-delay-3 flex flex-wrap gap-4 mt-8"
+    aria-label="Social networks and contact"
+  >
+    <SocialPill href="mailto:pedrorojas.gavidia@gmail.com">
+      <MailIcon class="size-4" />
+      Contact me
+    </SocialPill>
+    <SocialPill href="https://ve.linkedin.com/in/pedro-rojas-gavidia">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/pedrorojasg">
+      <GitHubIcon class="size-4" />
+      GitHub
+    </SocialPill>
+  </nav>
+</div>

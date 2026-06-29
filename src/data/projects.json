@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Thrive - SaaS Inventory Management",
+    "description": "High-traffic inventory management platform serving 100,000+ daily active users. As Senior Software Engineer I architected core modules in a Python/Django + TypeScript/React system, built 4 deep integrations (Clover, QuickBooks, Shopify, Square) syncing 10M+ transactions/day, and led the integration of Generative AI for invoice parsing and automated PR review.",
+    "link": "https://thrivemetrics.com/",
+    "image": "/projects/thrive.webp",
+    "tags": ["PYTHON", "DJANGO", "REACT"]
+  },
+  {
+    "title": "Turbo Notes - Full-stack notes application",
+    "description": "A full-stack notes app: create, edit, categorize and filter notes with debounced autosave (~500ms) and per-category theming. Built with Next.js 16 (App Router), React 19 and TypeScript on the frontend, and Django REST Framework + PostgreSQL on the backend. Features JWT auth via httpOnly cookies, server-side rendering with streaming skeletons, and full test coverage (Playwright E2E + unit tests).",
+    "link": "https://turbo-notes-pink.vercel.app",
+    "github": "https://github.com/pedrorojasg/turbo-notes",
+    "image": "/projects/turbo-notes.webp",
+    "tags": ["NEXT", "REACT", "TYPESCRIPT", "TAILWIND", "DJANGO", "PYTHON"]
+  }
+]
