@@ -4,7 +4,16 @@
     "description": "High-traffic inventory management platform serving 100,000+ daily active users. As Senior Software Engineer I architected core modules in a Python/Django + TypeScript/React system, built 4 deep integrations (Clover, QuickBooks, Shopify, Square) syncing 10M+ transactions/day, and led the integration of Generative AI for invoice parsing and automated PR review.",
     "link": "https://thrivemetrics.com/",
     "image": "/projects/thrive.webp",
+    "framed": true,
     "tags": ["PYTHON", "DJANGO", "REACT"]
+  },
+  {
+    "title": "IUCN Red List of Ecosystems",
+    "description": "Global reporting platform for the IUCN Red List of Ecosystems, used by 10,000 researchers across 5,000+ ecosystem assessments in 100 countries. I improved the reporting module that lets environmental researchers submit data on endangered ecosystems for peer review and editorial evaluation. Built with Python/Django and Angular.",
+    "link": "https://iucnrle.org/",
+    "image": "/projects/iucn.webp",
+    "framed": true,
+    "tags": ["PYTHON", "DJANGO", "ANGULAR"]
   },
   {
     "title": "Turbo Notes - Full-stack notes application",
@@ -12,6 +21,7 @@
     "link": "https://turbo-notes-pink.vercel.app",
     "github": "https://github.com/pedrorojasg/turbo-notes",
     "image": "/projects/turbo-notes.webp",
+    "framed": true,
     "tags": ["NEXT", "REACT", "TYPESCRIPT", "TAILWIND", "DJANGO", "PYTHON"]
   }
 ]

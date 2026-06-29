@@ -6,6 +6,7 @@ import React from "./icons/React.astro"
 import TypeScript from "./icons/TypeScript.astro"
 import Python from "./icons/Python.astro"
 import Django from "./icons/Django.astro"
+import Angular from "./icons/Angular.astro"
 import ExternalLink from "./icons/ExternalLink.astro"
 import LinkButton from "./LinkButton.astro"
 import projectsData from "@/data/projects.json"
@@ -41,23 +42,54 @@ const TAGS: Record<string, { name: string; class: string; icon: any }> = {
     class: "bg-[#092e20] text-white",
     icon: Django,
   },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#b52e31] text-white",
+    icon: Angular,
+  },
 }
 
-const PROJECTS = projectsData.map((project) => ({
-  ...project,
-  tags: project.tags.map((key) => TAGS[key]),
-}))
+const PROJECTS = projectsData.map((project) => {
+  const link = (project as { link?: string }).link
+  return {
+    ...project,
+    tags: project.tags.map((key) => TAGS[key]),
+    framed: (project as { framed?: boolean }).framed ?? false,
+    displayUrl: link ? new URL(link).host.replace(/^www\./, "") : "",
+  }
+})
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link, github, framed, displayUrl }) => (
     <article class="flex flex-col space-x-0 space-y-6 group md:flex-row md:space-x-10 md:space-y-0">
   <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition-all duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-[0_20px_60px_-10px_rgba(251,191,36,0.2)] lg:border lg:border-gray-800 lg:hover:border-yellow-400/30 lg:hover:bg-gray-800/50">
-      <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-      <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true"></div>
-    </div>
+    {framed ? (
+      <div class="relative transition-all duration-500 ease-in-out transform rounded-xl bg-gradient-to-br from-gray-700 to-gray-950 p-2 sm:p-3 shadow-xl ring-1 ring-gray-800 md:group-hover:-translate-y-1 md:group-hover:shadow-[0_20px_60px_-10px_rgba(251,191,36,0.2)] lg:group-hover:ring-yellow-400/30">
+        <div class="overflow-hidden rounded-lg ring-1 ring-black/40">
+          <div class="flex items-center gap-1.5 bg-gray-800/90 px-3 py-2.5">
+            <span class="size-2.5 rounded-full bg-[#ff5f57]" aria-hidden="true" />
+            <span class="size-2.5 rounded-full bg-[#febc2e]" aria-hidden="true" />
+            <span class="size-2.5 rounded-full bg-[#28c840]" aria-hidden="true" />
+            {displayUrl && (
+              <span class="mx-auto hidden max-w-[70%] truncate rounded-md bg-gray-900/70 px-3 py-1 text-[11px] text-gray-400 sm:block">
+                {displayUrl}
+              </span>
+            )}
+          </div>
+          <div class="relative">
+            <img alt={title} class="object-cover object-left-top w-full h-56 transition duration-500 sm:h-72 md:group-hover:scale-[1.03]" loading="lazy" src={image} />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition-all duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-[0_20px_60px_-10px_rgba(251,191,36,0.2)] lg:border lg:border-gray-800 lg:hover:border-yellow-400/30 lg:hover:bg-gray-800/50">
+        <img alt={title} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" aria-hidden="true" />
+      </div>
+    )}
   </div>
 
   <div class="w-full md:w-1/2 md:max-w-lg flex flex-col justify-center">
